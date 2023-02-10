@@ -1,0 +1,34 @@
+{
+  "branchPrefix": "test-renovate/",
+  "dryRun": true,
+  "username": "renovate-release",
+  "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
+  "onboarding": false,
+  "requireConfig": false,
+  "platform": "github",
+  "includeForks": true,
+  "repositories": [
+    "rwunderer/renovate-alpine"
+  ],
+  "packageRules": [
+    {
+      "description": "lockFileMaintenance",
+      "matchUpdateTypes": [
+        "pin",
+        "digest",
+        "patch",
+        "minor",
+        "major",
+        "lockFileMaintenance"
+      ],
+      "dependencyDashboardApproval": false,
+      "stabilityDays": 0
+    },
+    {
+      "allowedVersions": "<20000000",
+      "matchCurrentVersion": "<20000000",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["alpine"]
+    }
+  ]
+}
